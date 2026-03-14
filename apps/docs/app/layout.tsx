@@ -1,18 +1,22 @@
-import './global.css'
-import { RootProvider } from 'fumadocs-ui/provider'
-import { Inter } from 'next/font/google'
-import type { ReactNode } from 'react'
+// app/layout.tsx
+import { Metadata } from 'next'
 
-const inter = Inter({
-  subsets: ['latin'],
-})
-
-export default function Layout({ children }: { children: ReactNode }) {
-  return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
-        <RootProvider>{children}</RootProvider>
-      </body>
-    </html>
-  )
+export const metadata: Metadata = {
+  title: {
+    default: 'Pro Scholar Tools | AI-Powered Academic Research',
+    template: '%s | Pro Scholar Tools'
+  },
+  description: 'Ultimate AI tools for PhD researchers and legal scholars. Paraphrasing, summarizing, and legal AI assistant.',
+  keywords: ['AI research tools', 'PhD assistant', 'legal AI', 'academic paraphrasing'],
+  authors: [{ name: 'Mohamed Rabie Areef', url: 'https://www.proscholartools.com' }],
+  creator: 'Mohamed Rabie Areef',
+  alternates: {
+    canonical: 'https://www.proscholartools.com',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.proscholartools.com',
+    siteName: 'Pro Scholar Tools',
+  },
 }
