@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"],
-  experimental: {
-    mdxRs: true,
+  reactStrictMode: true,
+  // تحسين أداء المسارات للعالمية
+  i18n: {
+    locales: ['ar', 'en'],
+    defaultLocale: 'ar',
   },
-};
+  // ضمان أرشفة الروابط بشكل صحيح
+  trailingSlash: true,
+}
 
-const withMDX = require("@next/mdx")();
-module.exports = withMDX(nextConfig);
+module.exports = nextConfig
