@@ -1,0 +1,138 @@
+[build]
+  publish="public"
+  functions="netlify/functions"
+
+[[redirects]]
+  from="/api"
+  to="/.netlify/functions/api"
+  status=200
+
+[[redirects]]
+  from="/paraphrasing"
+  to="/paraphrasing.html"
+  status=200
+[[redirects]]
+  from="/summarizer"
+  to="/summarizer.html"
+  status=200
+[[redirects]]
+  from="/grammar-checker"
+  to="/grammar-checker.html"
+  status=200
+[[redirects]]
+  from="/headline-generator"
+  to="/headline-generator.html"
+  status=200
+[[redirects]]
+  from="/blog-writer"
+  to="/blog-writer.html"
+  status=200
+[[redirects]]
+  from="/social-media-creator"
+  to="/social-media-creator.html"
+  status=200
+[[redirects]]
+  from="/email-writer"
+  to="/email-writer.html"
+  status=200
+[[redirects]]
+  from="/citation-generator"
+  to="/citation-generator.html"
+  status=200
+[[redirects]]
+  from="/research-title"
+  to="/research-title.html"
+  status=200
+[[redirects]]
+  from="/paper-summary"
+  to="/paper-summary.html"
+  status=200
+[[redirects]]
+  from="/research-outline"
+  to="/research-outline.html"
+  status=200
+[[redirects]]
+  from="/academic-translator"
+  to="/academic-translator.html"
+  status=200
+[[redirects]]
+  from="/story-generator"
+  to="/story-generator.html"
+  status=200
+[[redirects]]
+  from="/poem-generator"
+  to="/poem-generator.html"
+  status=200
+[[redirects]]
+  from="/resume-builder"
+  to="/resume-builder.html"
+  status=200
+[[redirects]]
+  from="/code-generator"
+  to="/code-generator.html"
+  status=200
+[[redirects]]
+  from="/image-caption"
+  to="/image-caption.html"
+  status=200
+[[redirects]]
+  from="/pdf-summarizer"
+  to="/pdf-summarizer.html"
+  status=200
+[[redirects]]
+  from="/notes-organizer"
+  to="/notes-organizer.html"
+  status=200
+[[redirects]]
+  from="/meeting-minutes"
+  to="/meeting-minutes.html"
+  status=200
+
+[[redirects]]
+  from="/blog"
+  to="/blog/"
+  status=301
+
+[[redirects]]
+  from="/pricing"
+  to="/pricing.html"
+  status=200
+
+[[redirects]]
+  from="/about"
+  to="/about.html"
+  status=200
+
+[[redirects]]
+  from="/contact"
+  to="/contact.html"
+  status=200
+
+[[redirects]]
+  from="/privacy"
+  to="/privacy.html"
+  status=200
+
+[[headers]]
+  for="/*"
+  [headers.values]
+    X-Frame-Options="SAMEORIGIN"
+    X-Content-Type-Options="nosniff"
+    Referrer-Policy="strict-origin-when-cross-origin"
+    Permissions-Policy="camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy="default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.googleapis.com; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;"
+
+[[headers]]
+  for="/style.css"
+  [headers.values]
+    Cache-Control="public,max-age=604800,stale-while-revalidate=86400"
+
+[[headers]]
+  for="/app.js"
+  [headers.values]
+    Cache-Control="public,max-age=86400"
+
+[[redirects]]
+  from="/*"
+  to="/404.html"
+  status=404
